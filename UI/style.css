@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+}
+
+body{
+    padding-top: 0px;
+    z-index: -1;
+}
+
+nav{
+    height: 60px;
+    z-index: 1;
+    background: rgba(29, 25, 25, 0.87); 
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+.add-btn{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1;
+}
+
+.add-btn i{
+    font-size: 55px;
+    cursor: default;
+    color: rgba(151, 11, 34, 0.74);
+}
+
+.add-btn i:hover{
+    color: rgb(182, 6, 35);
+}
+
+.modal{
+    z-index: 100;
+    width: 315px;
+    height: 30vh;
+    margin-top: calc(30vh - 60px);
+    margin-left: 67.5px;
+    background: rgb(182, 6, 35);
+    border-radius: 15px;
+    animation: zoom 0.9s;
+    display: none;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.btn-add{
+    transition: 500ms;
+}
+
+#etName{
+    margin-top: 30px;
+    width: 252px;
+    margin-left: 31.5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#etDesc{
+    margin-top: 10px;
+    width: 252px;
+    margin-left: 31.5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#btn-set{
+    width: 60px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    margin-left: 127.5px;
+}

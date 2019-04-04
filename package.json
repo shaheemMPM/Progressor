@@ -1,7 +1,7 @@
 {
   "name": "Progressor",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A Simple ToDo Application",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
