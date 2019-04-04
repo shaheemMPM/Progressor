@@ -4,10 +4,11 @@
 
 ### Production State
 
-for using do following steps on terminal
+For using do following steps on terminal
 
 ```
 1. git clone https://github.com/shaheemMPM/Progressor.git
 2. cd Progressor
-3. electron .
+3. npm install
+4. electron .
 ```
