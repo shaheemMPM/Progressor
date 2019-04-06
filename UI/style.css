@@ -5,35 +5,42 @@
 body{
     padding-top: 0px;
     z-index: -1;
+    background: #f8f8f8;
 }
 
 nav{
     height: 60px;
     z-index: 1;
-    background: rgba(29, 25, 25, 0.87); 
+    background: #fff;
 }
 
-button{
+#btnAdd {
+    background-color: #00c5d7;
+    height: 70px;
+    position: fixed;
+    bottom: 25px;
+    right: calc(50% - 25px);
+    display: block;
+    color: #fff;
+    border-radius: 100%;
+    width: 70px;
+    transition: 250ms;
     border: none;
     outline: none;
-}
-
-.add-btn{
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    z-index: 1;
-}
-
-.add-btn i{
-    font-size: 55px;
+    box-shadow: -2px 2px 29px 0px rgba(0,0,0,0.52);
+    user-select: none;
+  }
+  
+  #btnAdd:hover {
     cursor: default;
-    color: rgba(151, 11, 34, 0.74);
-}
+  }
 
-.add-btn i:hover{
-    color: rgb(182, 6, 35);
-}
+  #z_plus {
+    text-align: center;
+    line-height: 70px;
+    font-size: 50px;
+    font-weight: 600;
+  }
 
 .modal{
     z-index: 100;

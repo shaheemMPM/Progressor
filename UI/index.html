@@ -5,20 +5,22 @@
     <script src="action.js"></script>
     <link rel="stylesheet" href="materialize/icon.css">
     <link rel="stylesheet" href="style.css">
-    <title>Progressor</title>
   </head>
   <body> 
-    <nav></nav> 
+    <nav>
+      
+    </nav> 
     
     <div id="modal" class="modal">
       <input type="text" id="etName" placeholder="Todo Name"><br>
-      <input type="text" id="etDesc" placeholder="Todo Description"><br>
-      <button id="btn-set">ADD</button>
+      <input type="text" id="etDesc" placeholder="Todo Description" onkeypress=""><br>
+      <button id="btn-set" onclick="addTask()">ADD</button>
     </div>
-    
-    <div class="add-btn">
-      <button class="btn-add" id="btnAdd" onclick="popup()"><i class="material-icons">add_circle</i></button>
+
+    <div id="btnAdd" tabindex="0" onclick="popup()">
+      <div id="z_plus">+</div>
     </div>
+
     <script>
       // You can also require other files to run in this process
       // require('./renderer.js')
