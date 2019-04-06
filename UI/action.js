@@ -1,5 +1,3 @@
-
-
 let state = true;
 function popup() {
     if(state){
@@ -19,6 +17,12 @@ function addTask() {
     let tempJson = {};
     tempJson.title = taskTitle;
     tempJson.description = taskDesctription;
-    console.log(tempJson);
-    document.getElementById('modal').style.display = "none";
+    if (taskTitle !== "") {
+      console.log(tempJson);
+      document.getElementById('etName').value = "";
+      document.getElementById('etDesc').value = "";
+      popup();
+    }else {
+      console.log("Title field can't be empty... !");
+    }
 }

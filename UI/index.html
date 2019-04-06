@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <script src="action.js"></script>
-    <link rel="stylesheet" href="materialize/icon.css">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body> 
+  <body>
     <nav>
-      
-    </nav> 
-    
+      <h2>PROGRESSOR</h2>
+    </nav>
+
+    <img class="home-img" src="assets/item_1.png">
+
     <div id="modal" class="modal">
-      <input type="text" id="etName" placeholder="Todo Name"><br>
-      <input type="text" id="etDesc" placeholder="Todo Description" onkeypress=""><br>
+      <h1>ADD TASK</h1>
+      <input type="text" class="task-text" id="etName" placeholder="TITLE"><br>
+      <input type="text" class="task-text" id="etDesc" placeholder="DESCRIPTION" onkeypress=""><br>
       <button id="btn-set" onclick="addTask()">ADD</button>
     </div>
 

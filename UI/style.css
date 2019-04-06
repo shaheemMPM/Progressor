@@ -14,6 +14,12 @@ nav{
     background: #fff;
 }
 
+nav h2{
+    color: #5d5d5d;
+    text-align: center;
+    padding-top: 16.5px;
+}
+
 #btnAdd {
     background-color: #00c5d7;
     height: 70px;
@@ -24,35 +30,36 @@ nav{
     color: #fff;
     border-radius: 100%;
     width: 70px;
-    transition: 250ms;
+    transition: 500ms;
     border: none;
     outline: none;
     box-shadow: -2px 2px 29px 0px rgba(0,0,0,0.52);
     user-select: none;
-  }
-  
-  #btnAdd:hover {
-    cursor: default;
-  }
+}
 
-  #z_plus {
+#btnAdd:hover {
+    cursor: default;
+}
+
+#z_plus {
     text-align: center;
     line-height: 70px;
     font-size: 50px;
     font-weight: 600;
-  }
+}
 
 .modal{
     z-index: 100;
-    width: 315px;
-    height: 30vh;
-    margin-top: calc(30vh - 60px);
-    margin-left: 67.5px;
-    background: rgb(182, 6, 35);
+    width: 370px;
+    height: 300px;
+    position: fixed;
+    bottom: 180px;
+    margin-left: 40px;
+    background: #fff;
     border-radius: 15px;
     animation: zoom 0.9s;
     display: none;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -2px 2px 29px 0px rgba(0,0,0,0.52);
 }
 
 @keyframes zoom {
@@ -60,30 +67,51 @@ nav{
     to {transform: scale(1)}
 }
 
-.btn-add{
-    transition: 500ms;
+.modal h1{
+  color: #5d5d5d;
+  text-align: center;
+  margin-top: 30px;
 }
 
 #etName{
-    margin-top: 30px;
-    width: 252px;
-    margin-left: 31.5px;
-    border-radius: 5px;
-    font-size: 20px;
+    margin-top: 20px;
 }
 
 #etDesc{
-    margin-top: 10px;
-    width: 252px;
-    margin-left: 31.5px;
-    border-radius: 5px;
-    font-size: 20px;
+    margin-top: 15px;
+}
+
+.task-text{
+    width: 330px;
+    height: 45px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background: rgb(240, 240, 240);
+    font-weight: 400;
+    text-align: center;
+    color: #5d5d5d;
+    font-size: 22px;
+    outline: none;
+}
+
+.task-text::placeholder{
+    font-weight: 600;
 }
 
 #btn-set{
-    width: 60px;
-    font-size: 20px;
+    width: 120px;
+    height: 45px;
+    background: #00c5d7;
+    color: #fff;
+    font-size: 25px;
     margin-top: 20px;
-    border-radius: 6px;
+    border-radius: 10px;
     margin-left: 127.5px;
+    box-shadow: -2px 2px 20px 0px rgba(0,0,0,0.52);
+    outline: none;
+}
+
+.home-img{
+    width: 300px;
+    margin: 100px 75px auto 75px;
 }
