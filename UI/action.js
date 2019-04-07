@@ -10,19 +10,3 @@ function popup() {
         state = true;
     }
 }
-
-function addTask() {
-    let taskTitle = document.getElementById('etName').value;
-    let taskDesctription = document.getElementById('etDesc').value;
-    let tempJson = {};
-    tempJson.title = taskTitle;
-    tempJson.description = taskDesctription;
-    if (taskTitle !== "") {
-      console.log(tempJson);
-      document.getElementById('etName').value = "";
-      document.getElementById('etDesc').value = "";
-      popup();
-    }else {
-      console.log("Title field can't be empty... !");
-    }
-}
