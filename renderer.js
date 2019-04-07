@@ -4,14 +4,35 @@
 const Store = require('electron-store');
 const store = new Store();
 
-// store.clear();
+store.clear();
 
+let allCards = document.getElementById('allCards');
 let loadData = store.get('svData');
 console.log(loadData);
 
 if (loadData !== undefined) {
     document.getElementById('firstIMG').style.display = "none";
     document.getElementById('progressor-contents').style.display = "block";
+
+    let str1 = '<div class="task-card"><div class="card-left"><img src="assets/icon_1.png"></div><div class="card-middle"><div class="mid-in"><h1>';
+    let str2 = '</h1><h2>';
+    let str3 = '</h2><div><div class="task-prg"><div class="task-bar"><div class="task-bar-fill" id="';
+    let str4 = '"></div></div></div><div class="task-per-num" id="'
+    let str5 = '"><h2>';
+    let str6 = '</h2></div></div></div></div><div class="card-right"><img src="assets/opt_btn.png"></div></div>';
+
+    let dataObj = JSON.parse(loadData);
+    let noCards = dataObj.length;
+
+    let tempInner = '';
+    for (var i = 0; i < noCards; i++) {
+        let tempTitle = dataObj[i].title;
+        let tempDescription = dataObj[i].description;
+        tempInner += str1+tempTitle+str2+tempDescription+str3+'taskPerc'+(i+1)+str4+'taskPerNum'+(i+1)+str5+'48%'+str6;
+    }
+    // tempInner = str1+'Lorem Ipsum dolor Sit amet.'+str2+'Lorem ipsum dolor sit amet.'+str3+'taskPerc1'+str4+'taskPerNum1'+str5+'48%'+str6;
+    allCards.innerHTML = tempInner;
+
 }else {
     document.getElementById('firstIMG').style.display = "block";
     document.getElementById('progressor-contents').style.display = "none";
@@ -41,6 +62,18 @@ action.addEventListener("click", function() {
       document.getElementById('etDesc').value = "";
       document.getElementById('firstIMG').style.display = "none";
       document.getElementById('progressor-contents').style.display = "block";
+
+      let str1 = '<div class="task-card"><div class="card-left"><img src="assets/icon_1.png"></div><div class="card-middle"><div class="mid-in"><h1>';
+      let str2 = '</h1><h2>';
+      let str3 = '</h2><div><div class="task-prg"><div class="task-bar"><div class="task-bar-fill" id="';
+      let str4 = '"></div></div></div><div class="task-per-num" id="'
+      let str5 = '"><h2>';
+      let str6 = '</h2></div></div></div></div><div class="card-right"><img src="assets/opt_btn.png"></div></div>';
+
+      let tempInner = allCards.innerHTML;
+      let count = dataJSON.length;
+      tempInner += str1+taskTitle+str2+taskDesctription+str3+'taskPerc'+count+str4+'taskPerNum'+count+str5+'48%'+str6;
+      allCards.innerHTML = tempInner;
       popup();
     }else {
       console.log("Title field can't be empty... !");
