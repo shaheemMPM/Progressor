@@ -12,3 +12,7 @@ For using do following steps on terminal
 3. npm install
 4. electron .
 ```
+
+#### Screenshots
+![screen shot](https://raw.githubusercontent.com/shaheemMPM/Progressor/master/UI/scr1.png)
+![screen shot](https://raw.githubusercontent.com/shaheemMPM/Progressor/master/UI/scr2.png)
