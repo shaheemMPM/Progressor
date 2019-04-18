@@ -4,7 +4,7 @@
 const Store = require('electron-store');
 const store = new Store();
 
-store.clear();
+// store.clear();
 
 let allCards = document.getElementById('allCards');
 let loadData = store.get('svData');
@@ -44,6 +44,9 @@ action.addEventListener("click", function() {
     let taskTitle = document.getElementById('etName').value;
     let taskDesctription = document.getElementById('etDesc').value;
     let tempJSON = {};
+    if (taskDesctription === "") {
+        taskDesctription = "&nbsp;&nbsp;";
+    }
     tempJSON.title = taskTitle;
     tempJSON.description = taskDesctription;
     if (taskTitle !== "") {
